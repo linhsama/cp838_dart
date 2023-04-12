@@ -30,14 +30,10 @@ int InputNumber() {
  */
 String ReadNumber(number) {
       var ChuSo = [" không ", " một ", " hai ", " ba ", " bốn ", " năm ", " sáu ", " bảy ", " tám ", " chín "];
-      var tram;
-      var chuc;
-      var donvi;
+      var tram = (number / 100).toInt();
+      var chuc = ((number % 100) / 10).toInt();
+      var donvi = number % 10;
       var KetQua = "";
-
-      tram = (number / 100).toInt();
-      chuc = ((number % 100) / 10).toInt();
-      donvi = number % 10;
 
       if (tram == 0 && chuc == 0 && donvi == 0) {
         return "";
@@ -82,5 +78,6 @@ String ReadNumber(number) {
             }
             break;
         }
+
         return KetQua.trim();
 }
