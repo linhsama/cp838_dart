@@ -1,4 +1,3 @@
-
 import 'dart:io';
 
 /**
@@ -7,9 +6,12 @@ import 'dart:io';
  */
 
 void main() {
-  int n = InputNumber();
-  String result = ReadNumber(n);
-  print("Số ${n} đọc là: ${result}");
+  int n = 0;
+  do {
+    n = InputNumber();
+    String result = ReadNumber(n);
+    print("Số ${n} đọc là: ${result}");
+  } while (n != 999);
 }
 
 /**
@@ -29,55 +31,67 @@ int InputNumber() {
  * Hàm đọc số có 3 chữ số
  */
 String ReadNumber(number) {
-      var ChuSo = [" không ", " một ", " hai ", " ba ", " bốn ", " năm ", " sáu ", " bảy ", " tám ", " chín "];
-      var tram = (number / 100).toInt();
-      var chuc = ((number % 100) / 10).toInt();
-      var donvi = number % 10;
-      var KetQua = "";
+  var ChuSo = [
+    " không ",
+    " một ",
+    " hai ",
+    " ba ",
+    " bốn ",
+    " năm ",
+    " sáu ",
+    " bảy ",
+    " tám ",
+    " chín "
+  ];
 
-      if (tram == 0 && chuc == 0 && donvi == 0) {
-        return "";
-      }
+  // 102 1 trăm lẻ hai
+  // 112 1 trăm mười hai
+  // 120 1 trăm hai mươi
+  // 121 1 trăm hai mươi mốt
+  // 125 1 trăm hai mươi lăm
+  // 100 1 trăm
 
-      if (tram != 0) {
-        KetQua += ChuSo[tram] + " trăm ";
-        if ((chuc == 0) && (donvi != 0)) KetQua += " lẻ ";
-      }
+  var tram = (number / 100).toInt();
+  var chuc = ((number % 100) / 10).toInt();
+  var donvi = number % 10;
+  var KetQua = "";
 
+  KetQua += ChuSo[tram] + " trăm ";
+
+  if ((chuc == 0) && (donvi != 0)) {
+    KetQua = KetQua + " lẻ ";
+  }
+
+  if (chuc == 1) {
+    KetQua += " mười ";
+  }
+
+  if ((chuc != 0) && (chuc != 1)) {
+    KetQua += ChuSo[chuc] + " mươi";
+  }
+
+  switch (donvi) {
+    case 1:
       if ((chuc != 0) && (chuc != 1)) {
-        KetQua += ChuSo[chuc] + " mươi";
-        if ((chuc == 0) && (donvi != 0)){
-            KetQua = KetQua + " lẻ ";
-        }
+        KetQua += " mốt ";
+      } else {
+        KetQua += ChuSo[donvi];
       }
-
-      if (chuc == 1) {
-        KetQua += " mười ";
+      break;
+    case 5:
+      if (chuc == 0) {
+        KetQua += ChuSo[donvi];
+      } else {
+        KetQua += " lăm ";
       }
+      break;
+    default:
+      if (donvi != 0) {
+        KetQua += ChuSo[donvi];
+      }
+      break;
+  }
 
-      switch (donvi) {
-          case 1:
-            if ((chuc != 0) && (chuc != 1)) {
-              KetQua += " mốt ";
-            }
-            else {
-              KetQua += ChuSo[donvi];
-            }
-            break;
-          case 5:
-            if (chuc == 0) {
-              KetQua += ChuSo[donvi];
-            }
-            else {
-              KetQua += " lăm ";
-            }
-            break;
-          default:
-            if (donvi != 0) {
-              KetQua += ChuSo[donvi];
-            }
-            break;
-        }
-
-        return KetQua.trim();
+  return (KetQua.trim())[0].toUpperCase() +
+      (KetQua.trim()).substring(1).toLowerCase();
 }
