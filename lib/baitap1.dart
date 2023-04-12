@@ -9,7 +9,7 @@ void main() {
   String name = InputName();
   int age = InputAge();
   int result = CalcYear(age);
-  print("Xin chào ${name}, còn ${result} là đến mừng thọ 100 tuổi!");
+  print("Xin chào ${name}, còn ${result} năm nữa là đến mừng thọ 100 tuổi!");
 }
 
 /**
