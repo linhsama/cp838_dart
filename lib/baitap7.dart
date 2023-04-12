@@ -33,7 +33,7 @@ String ReadNumber(int number) {
   String tram = "";
 
   int a = number % 10;
-  int b = ((number / 10) % 10).toInt();
+  int b = ((number / 10) % 10).toInt(); // a~/b chia lấy nguyên
   int c = (number / 100).toInt();
 
   switch (c) {
