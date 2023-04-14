@@ -1,6 +1,6 @@
-# cp838_tl01 (7/04/2023)
-# cp838_tl02 (10/04/2023)
-# cp838_tl03 (12/04/2023 )
+## cp838_tl01 (7/04/2023)
+## cp838_tl02 (10/04/2023)
+## cp838_tl03 (12/04/2023 )
 
 ##  Bài thực hành 1:
 - Bài 1. Viết chương trình hỏi người dùng họ tên và tuổi (là một số nguyên). Tính và in ra màn hình còn bao nhiêu năm nữa thì người đó mừng thọ 100 tuổi 
