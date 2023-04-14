@@ -2,19 +2,17 @@ import 'dart:io';
 import 'dart:math';
 
 /**
- * Bài 11. Bài 12. Viết chương trình in bảng cửu chương ra màn hình.
- */
-import 'dart:io';
-import 'dart:math';
-
-/**
  * Bài 17. Viết chương trình kiểm tra một số nguyên dương n có phải là số nguyên tố hay không.
  */
 
 void main() {
   int n = InputNumber();
-  String result = SoNguyenTo(n);
-  print(result);
+  bool result = SoNguyenTo(n);
+  if (result) {
+    print("$n là số nguyên tố!");
+  } else {
+    print("$n không là số nguyên tố!");
+  }
 }
 
 /**
@@ -22,24 +20,24 @@ void main() {
  */
 int InputNumber() {
   int result = 0;
-  do {
-    stdout.write("Nhập số n > 2: ");
-    result = int.parse(stdin.readLineSync()!);
-  } while (result < 2);
+  stdout.write("Nhập số dương cần kiểm tra: ");
+  result = int.parse(stdin.readLineSync()!);
   return result;
 }
 
 /**
  * Hàm SoNguyenTo(n)
  */
-String SoNguyenTo(n) {
-  bool check = true;
-  int t = sqrt(n).floor();
-  for (int i = 2; i <= t; i++) {
+bool SoNguyenTo(n) {
+  bool result = true;
+  if (n < 2) {
+    result = false;
+  }
+  for (int i = 2; i <= sqrt(n).floor(); i++) {
     if (n % i == 0) {
-      check = false;
+      result = false;
       break;
     }
   }
-  return check ? "$n là số nguyên tố" : "$n không số nguyên tố";
+  return result;
 }

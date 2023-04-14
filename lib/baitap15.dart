@@ -2,12 +2,6 @@ import 'dart:io';
 import 'dart:math';
 
 /**
- * Bài 11. Bài 12. Viết chương trình in bảng cửu chương ra màn hình.
- */
-import 'dart:io';
-import 'dart:math';
-
-/**
  * Bài 15. Viết chương trình tìm ước số chung lớn nhất (UCLN) của hai số nguyên dương a và b nhập từ bàn phím.
  */
 

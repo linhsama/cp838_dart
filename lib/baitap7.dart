@@ -7,7 +7,9 @@ import 'dart:io';
 
 void main() {
   int n = InputNumber();
-  String result = ReadNumber(n);
+  // String result = ReadNumber(n);
+  String result = ReadNumberByArray(n);
+
   print("Số ${n} đọc là: ${result}");
 }
 
@@ -137,4 +139,73 @@ String ReadNumber(int number) {
   }
 
   return tram + chuc + donVi;
+}
+
+/**
+ * Hàm đọc số có 3 chữ số dùng mảng
+ */
+String ReadNumberByArray(number) {
+  var ChuSo = [
+    " không ",
+    " một ",
+    " hai ",
+    " ba ",
+    " bốn ",
+    " năm ",
+    " sáu ",
+    " bảy ",
+    " tám ",
+    " chín "
+  ];
+
+  // 102 1 trăm lẻ hai
+  // 112 1 trăm mười hai
+  // 120 1 trăm hai mươi
+  // 121 1 trăm hai mươi mốt
+  // 125 1 trăm hai mươi lăm
+  // 100 1 trăm
+
+  var tram = (number / 100).toInt();
+  var chuc = ((number % 100) / 10).toInt();
+  var donvi = number % 10;
+  var KetQua = "";
+
+  KetQua += ChuSo[tram] + " trăm ";
+
+  if ((chuc == 0) && (donvi != 0)) {
+    KetQua = KetQua + " lẻ ";
+  }
+
+  if (chuc == 1) {
+    KetQua += " mười ";
+  }
+
+  if ((chuc != 0) && (chuc != 1)) {
+    KetQua += ChuSo[chuc] + " mươi";
+  }
+
+  switch (donvi) {
+    case 1:
+      if ((chuc != 0) && (chuc != 1)) {
+        KetQua += " mốt ";
+      } else {
+        KetQua += ChuSo[donvi];
+      }
+      break;
+    case 5:
+      if (chuc == 0) {
+        KetQua += ChuSo[donvi];
+      } else {
+        KetQua += " lăm ";
+      }
+      break;
+    default:
+      if (donvi != 0) {
+        KetQua += ChuSo[donvi];
+      }
+      break;
+  }
+
+  return (KetQua.trim())[0].toUpperCase() +
+      (KetQua.trim()).substring(1).toLowerCase();
 }

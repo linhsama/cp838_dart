@@ -2,12 +2,6 @@ import 'dart:io';
 import 'dart:math';
 
 /**
- * Bài 11. Bài 12. Viết chương trình in bảng cửu chương ra màn hình.
- */
-import 'dart:io';
-import 'dart:math';
-
-/**
  * Bài 16. Viết chương trình tìm bội số chung nhỏ nhất (BCNN) của hai số nguyên dương a và b nhập từ bàn phím.
  */
 

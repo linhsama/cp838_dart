@@ -2,12 +2,6 @@ import 'dart:io';
 import 'dart:math';
 
 /**
- * Bài 11. Bài 12. Viết chương trình in bảng cửu chương ra màn hình.
- */
-import 'dart:io';
-import 'dart:math';
-
-/**
  * Bài 13. Hãy sử dụng vòng lặp for để in tất cả các ký tự A tới Z ra màn hình.
  */
 
