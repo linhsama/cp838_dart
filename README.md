@@ -1,6 +1,8 @@
-# cp838_tl02
+# cp838_tl01 (7/04/2023)
+# cp838_tl02 (10/04/2023)
+# cp838_tl03 (12/04/2023 )
 
-##  Bài thực hành 1: (10/04/2023, 12/04/2023 )
+##  Bài thực hành 1:
 - Bài 1. Viết chương trình hỏi người dùng họ tên và tuổi (là một số nguyên). Tính và in ra màn hình còn bao nhiêu năm nữa thì người đó mừng thọ 100 tuổi 
 - Bài 2. Viết chương trình hỏi người dùng nhập vào một số nguyên. In ra màn hình số nguyên đó là số chẵn hay lẻ.
 - Bài 3. In ra màn hình tất cả các số nguyên dương lẻ nhỏ hơn 100.
