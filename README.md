@@ -7,3 +7,4 @@
 - Bài 6. Viết chương trình kiểm tra xem hai số thực a b cho trước có cùng dấu hay không.
 - Bài 7. Viết chương trình in ra cách đọc của một số nguyên n cho trước có ba chữ số. Ví dụ với n=123 thì kết quả in ra màn hình là Một trăm hai mươi ba.
 - Bài 8. Viết chương trình sinh ra một số tự nhiên n ngẫu nhiên từ 1 đến 100. Đề nghị người dùng đoán một số và nhập vào. In ra màn hình thông báo xem số người dùng đoán đúng, lớn hơn hay nhỏ hơn số n. Nếu chưa đúng thì cho phép người dùng đoán lại hai lần nữa.
+----
