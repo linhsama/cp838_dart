@@ -49,5 +49,15 @@ int UCLN(a, b) {
     else
       b = b - a;
   }
+
   return a;
+}
+
+/**
+ * Hàm Euclid(a, b)
+ */
+
+int Euclid(int a, int b) {
+  if (b == 0) return a;
+  return Euclid(b, a % b);
 }
