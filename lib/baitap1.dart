@@ -1,49 +1,43 @@
 import 'dart:io';
+import 'dart:math';
 
 /**
- *   Bài 1. Viết chương trình hỏi người dùng họ tên và tuổi (là một số nguyên).
- *   Tính và in ra màn hình còn bao nhiêu năm nữa thì người đó mừng thọ 100 tuổi
+ * Bài 17. Viết chương trình kiểm tra một số nguyên dương n có phải là số nguyên tố hay không.
  */
 
 void main() {
-  String name = InputName();
-  int age = InputAge();
-  int result = CalcYear(age);
-  print("Xin chào ${name}, còn ${result} năm nữa là đến mừng thọ 100 tuổi!");
+  int n = InputNumber();
+  bool result = SoNguyenTo(n);
+  if (result) {
+    print("$n là số nguyên tố!");
+  } else {
+    print("$n không là số nguyên tố!");
+  }
 }
 
 /**
- * Hàm nhập tên
+ * Hàm nhập
  */
-String InputName() {
-  String result = "";
-
-  do {
-    stdout.write("Nhập tên: ");
-    result = stdin.readLineSync()!;
-  } while (result.isEmpty);
-
-  return result;
-}
-
-/**
- * Hàm nhập tuổi
- */
-int InputAge() {
+int InputNumber() {
   int result = 0;
-  do {
-    stdout.write("Nhập tuổi: ");
-    result = int.parse(stdin.readLineSync()!);
-  } while (result < 0);
-
+  stdout.write("Nhập số dương cần kiểm tra: ");
+  result = int.parse(stdin.readLineSync()!);
   return result;
 }
 
 /**
- * Hàm tính số năm
- * Số năm = 100 - số tuổi
+ * Hàm SoNguyenTo(n)
  */
-int CalcYear(int age) {
-  int result = 100 - age;
+bool SoNguyenTo(n) {
+  bool result = true;
+  if (n < 2) {
+    result = false;
+  }
+  for (int i = 2; i <= sqrt(n).floor(); i++) {
+    if (n % i == 0) {
+      result = false;
+      break;
+    }
+  }
   return result;
 }
