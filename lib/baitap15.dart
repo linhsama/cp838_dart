@@ -17,8 +17,10 @@ void main() {
  */
 int InputNumberA() {
   int result = 0;
-  stdout.write("Nhập số A: ");
-  result = int.parse(stdin.readLineSync()!);
+  do {
+    stdout.write("Nhập số A: ");
+    result = int.parse(stdin.readLineSync()!);
+  } while (result < 1);
   return result;
 }
 
@@ -27,8 +29,10 @@ int InputNumberA() {
  */
 int InputNumberB() {
   int result = 0;
-  stdout.write("Nhập số B: ");
-  result = int.parse(stdin.readLineSync()!);
+  do {
+    stdout.write("Nhập số B: ");
+    result = int.parse(stdin.readLineSync()!);
+  } while (result < 1);
   return result;
 }
 
@@ -38,11 +42,24 @@ int InputNumberB() {
 int UCLN(a, b) {
   while (a != b) {
     if (a > b)
-      a = a - b;
+      a -= b;
     else
-      b = b - a;
+      b -= a;
   }
   return a;
+}
+
+/**
+ * Hàm UCLN_MOD(a, b)
+ */
+int UCLN_MOD(a, b) {
+  while (a * b != 0) {
+    if (a > b)
+      a %= b;
+    else
+      b %= a;
+  }
+  return a + b;
 }
 
 /**

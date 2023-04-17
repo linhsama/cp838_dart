@@ -17,8 +17,10 @@ void main() {
  */
 int InputNumberA() {
   int result = 0;
-  stdout.write("Nhập số A: ");
-  result = int.parse(stdin.readLineSync()!);
+  do {
+    stdout.write("Nhập số A: ");
+    result = int.parse(stdin.readLineSync()!);
+  } while (result < 1);
   return result;
 }
 
@@ -27,8 +29,10 @@ int InputNumberA() {
  */
 int InputNumberB() {
   int result = 0;
-  stdout.write("Nhập số B: ");
-  result = int.parse(stdin.readLineSync()!);
+  do {
+    stdout.write("Nhập số B: ");
+    result = int.parse(stdin.readLineSync()!);
+  } while (result < 1);
   return result;
 }
 
