@@ -8,7 +8,7 @@ import 'dart:math';
 void main() {
   int n = InputNumber();
   String result = ListSoNguyenTo(n);
-  print("$n số nguyên tố đầu tien: $result");
+  print("$n số nguyên tố đầu tiên: $result");
 }
 
 /**
