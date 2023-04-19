@@ -7,7 +7,9 @@ import 'dart:math';
 
 void main() {
   int n = InputNumber();
-  String result = PhanTichThuaSoNguyenTo(n);
+  // String result = PhanTichThuaSoNguyenTo(n);
+  String result = ListThuaSoNguyenTo(n);
+
   print("${n} = ${result}");
 }
 
@@ -29,19 +31,32 @@ int InputNumber() {
 String PhanTichThuaSoNguyenTo(n) {
   String result = "";
   int i = 2;
-
-  if (n < 3) {
-    result += n.toString();
-  } else {
-    while (n > 1) {
-      if (n % i == 0) {
-        result += "*" + i.toString();
-        n /= i;
-      } else {
-        i++;
-      }
+  while (n > 1) {
+    if (n % i == 0) {
+      result += "*" + i.toString();
+      n ~/= i;
+    } else {
+      i++;
     }
   }
 
   return result.length > 1 ? result.substring(1) : result;
+}
+
+/**
+ * Hàm ListThuaSoNguyenTo
+ */
+
+String ListThuaSoNguyenTo(n) {
+  List<int> result = [];
+  int i = 2;
+  while (n > 1) {
+    if (n % i == 0) {
+      result.add(i);
+      n ~/= i;
+    } else {
+      i++;
+    }
+  }
+  return result.join('*');
 }
