@@ -31,6 +31,5 @@ int TichUocSo(n) {
       result *= i;
     }
   }
-
   return result;
 }
