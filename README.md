@@ -40,8 +40,7 @@
   trước.
 - Bài 22. Viết chương trình tìm số nguyên dương m lớn nhất sao cho 1 + 2 + 3 + … + m < N.
 - Bài 23. Viết chương trình liệt kê tất cả số nguyên tố có 5 chữ số.
-- Bài 24. Viết chương trình phân tích số nguyên n thành các thừa số nguyên tố. Ví dụ: 100 = 2*2*
-  5\*5.
+- Bài 24. Viết chương trình phân tích số nguyên n thành các thừa số nguyên tố. Ví dụ: 100 = 2*2*5*5.
 - Bài 25. Viết chương trình tính tổng của các chữ số của môt số nguyên n trong Dart. baitap24.dartSố
   nguyên dương n được nhập từ bàn phím. Với n = 1234, tổng các chữ số: 1 + 2 + 3 + 4 = 10.
 - Bài 26. Viết chương trình kiểm tra một số nguyên dương n có là số thuận nghịch hay không.
