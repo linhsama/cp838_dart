@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:math';
 
 /**
-  * Bài 25. Viết chương trình tính tổng của các chữ số của môt số nguyên n trong Dart.
+ * Bài 25. Viết chương trình tính tổng của các chữ số của môt số nguyên n trong Dart.
  * Số nguyên dương n được nhập từ bàn phím.
  * Với n = 1234, tổng các chữ số: 1 + 2 + 3 + 4 = 10.
  * */
@@ -28,11 +28,11 @@ int InputNumber() {
 /**
  * Hàm TinhTong
  */
-int TinhTong(n) {
+int TinhTong(int n) {
   int result = 0;
   do {
-    result = (result + n % 10).toInt();
-    n = n / 10;
+    result += n % 10;
+    n ~/= 10;
   } while (n > 0);
   return result;
 }
