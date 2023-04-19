@@ -8,7 +8,7 @@ import 'dart:math';
 void main() {
   int n = InputNumber();
   int result = TichUocSo(n);
-  print("Tất cả ước số của số nguyên dương ${n} là: $result");
+  print("Tích tất cả ước số của số nguyên dương ${n} là: $result");
 }
 
 /**
