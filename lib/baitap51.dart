@@ -8,20 +8,20 @@ import 'dart:math';
  */
 
 void main() {
-  String result = HePhuongTrinh();
+  String result = GiaiPhuongTrinh();
   print(result);
 }
 
 /**
     Giải phương trình 3 ẩn:
     1000x + 2000y + 5000z = 200000
-    TXĐ:
+    Điều kiện:
       x thuộc [0,200]
       y thuộc [0,100]
       z thuộc [0,40]
  */
 
-String HePhuongTrinh() {
+String GiaiPhuongTrinh() {
   var result = [];
   int max = 0;
   int count = 0;
