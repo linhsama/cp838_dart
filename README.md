@@ -20,7 +20,7 @@
 - Bài 12. Viết chương trình in bảng cửu chương ra màn hình.
 - Bài 13. Hãy sử dụng vòng lặp for để in tất cả các ký tự A tới Z ra màn hình.
 - Bài 14. Viết một chương trình tính giai thừa của một số nguyên dương n. Với n được nhập từ bàn
-  phím. Ví dụ, n = 8 thì kết quả đầu ra phải là 1*2*3*4*5*6*7\*8 = 40320
+  phím. Ví dụ, n = 8 thì kết quả đầu ra phải là 1*2*3*4*5*6*7*8 = 40320
 - Bài 15. Viết chương trình tìm ước số chung lớn nhất (UCLN) của hai số nguyên dương a và b nhập từ
   bàn phím.
 - Bài 16. Viết chương trình tìm bội số chung nhỏ nhất (BCNN) của hai số nguyên dương a và b nhập từ
