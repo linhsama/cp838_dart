@@ -16,9 +16,9 @@ void main() {
     Giải phương trình 3 ẩn:
     1000x + 2000y + 5000z = 200000
     Điều kiện:
-      x thuộc [0,200]
-      y thuộc [0,100]
-      z thuộc [0,40]
+    x thuộc [0,200]
+    y thuộc [0,100]
+    z thuộc [0,40]
  */
 
 String GiaiPhuongTrinh() {
@@ -29,14 +29,14 @@ String GiaiPhuongTrinh() {
     for (int y = 0; y <= 100; y++) {
       for (int z = 0; z <= 40; z++) {
         if (1000 * x + 2000 * y + 5000 * z == 200000) {
-          result.add([x, y, z]);
+          result.add(["${x} tờ 1.000đ, ${y} tờ 2.000đ, ${z} tờ 50.000đ"]);
           max = Max(Max(x, y), z);
           count++;
         }
       }
     }
   }
-  return "Số phương án có thể là: ${count} phương án \n${result.join('\n')} \n => Giá trị lớn nhất ${max}";
+  return "Số phương án có thể là: \n${result.join('\n')} \n => Giá trị lớn nhất ${max}";
 }
 
 /**
