@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:math';
 
 /**
  * Bài 56. Viết hàm tìm UCLN của hai số nguyên a và b sử dụng đệ quy.

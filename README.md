@@ -49,6 +49,14 @@
 
 ------
 
+- Bài 46. Giải phương trình bậc nhất: ax + b = 0
+- Bài 47. Giải phương trình bậc hai: ax^2 + bx + c = 0
+- Bài 48. Giải phương trình trùng phương: ax^4 + bx^2 + c = 0
+- Bài 49. Viết chương trình nhập vào ba cạnh của một tam giác là các số nguyên dương. Hãy cho biết
+  đó là tam giác gì?
+- Bài 50. Lập chương trình giải hệ: {ã + by = cdx + ey = f}. Các hệ số a,b,c,d,e,f nhập từ bàn phím.
+  Yêu cầu xét tất cả các trường hợp có thể. (Gợi ý dùng định thức).
+
 - Bài 51. Cần có tổng 200.000đ từ 3 loại tiền 1000đ, 2000đ và 5000đ. Lập chương trình để tìm tất cả
   các phương án có thể. Tìm giá trị lớn nhất trong mảng một chiều các số thực.
 - Bài 52. Viết chương trình tính tổng các số tự nhiên từ 1 tới n.
