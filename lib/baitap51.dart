@@ -30,7 +30,6 @@ String GiaiPhuongTrinh() {
         if (1000 * x + 2000 * y + 5000 * z == 200000) {
           result.add(["${x} tờ 1.000đ, ${y} tờ 2.000đ, ${z} tờ 50.000đ"]);
           max = Max(Max(x, y), z);
-          count++;
         }
       }
     }
