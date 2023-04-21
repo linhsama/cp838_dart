@@ -8,37 +8,35 @@ import 'dart:math';
  */
 
 void main() {
-  String result = HePhuongTrinh();
-  print("$result");
+  String result = GiaiPhuongTrinh();
+  print(result);
 }
 
 /**
-    Giải hệ phương trình:
-
-    1000x + 2000y + 5000z = 200.000
-
-    200 * 1000 = 200000 <=> x thuộc [0, 200]
-    100 * 2000 = 200000 <=> y thuộc [0, 100]
-    40 * 5000 = 200000 <=> z thuộc [0, 40]
-
-    [200,0,0]
-
+    Giải phương trình 3 ẩn:
+    1000x + 2000y + 5000z = 200000
+    Điều kiện:
+      x thuộc [0,200]
+      y thuộc [0,100]
+      z thuộc [0,40]
  */
 
-String HePhuongTrinh() {
-  String result = "";
+String GiaiPhuongTrinh() {
+  var result = [];
   int max = 0;
-  for (int i = 0; i <= 200; ++i) {
-    for (int j = 0; j <= 100; ++j) {
-      for (int k = 0; k <= 40; ++k) {
-        if (i * 1000 + j * 2000 + k * 5000 == 200000) {
-          max = Max(Max(i, j), k);
-          result += "\n" + "Cần ${i} tờ 1000đ, ${j} tờ 2000đ và ${k} tờ 5000đ";
+  int count = 0;
+  for (int x = 0; x <= 200; x++) {
+    for (int y = 0; y <= 100; y++) {
+      for (int z = 0; z <= 40; z++) {
+        if (1000 * x + 2000 * y + 5000 * z == 200000) {
+          result.add([x, y, z]);
+          max = Max(Max(x, y), z);
+          count++;
         }
       }
     }
   }
-  return "Kết quả: ${result} \n => Giá trị lớn nhất ${max}";
+  return "Số phương án có thể là: ${count} phương án \n${result.join('\n')} \n => Giá trị lớn nhất ${max}";
 }
 
 /**
